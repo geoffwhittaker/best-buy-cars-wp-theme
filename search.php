@@ -6,7 +6,7 @@
        
 <div class="row">   
     <div class="col-xs-12 col-sm-8">
-    <p class="bg-success text-white search-header">Search results</p> 
+    <div class="bg-success text-white search-header top-margin">Search results</div> 
         <?php 
        
       // main content ---------------------------------------------
