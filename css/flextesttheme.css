@@ -1,0 +1,61 @@
+
+body{
+    padding: 1em;
+}
+
+
+.add-margin{
+    margin-left: 1em;
+}
+/* background for carousel */
+.content-wrapper{
+    background-color:lightblue;
+    margin: 1em;
+    padding: 0.5em;
+}
+.entry-title, p{
+    color: black;
+}
+.hide-thumb {
+    display: none;
+  }
+  
+  @media screen and (min-width: 600px) {
+  .hide-thumb {
+      display: block;
+    }
+  
+}
+
+  .post-categories{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+  }
+  .add-padding{
+padding: 1em
+  }
+.search-form-container{
+    margin-top:0.5em;
+    margin-bottom: 0.5em;
+    width: 50%;
+}
+/* footer menu*/
+.menu{
+    list-style-type: none;
+    background-color: white;
+    padding: 0.5em;
+    margin: 1em;
+    width: 50%;
+}
+.footer{
+    margin-top: 1em;
+    background-color: lightblue;
+}
+.post-links{
+    margin-left: 10em;
+}
+.search-header{
+    padding: 0.5em;
+}
