@@ -25,7 +25,7 @@ endif;
 
 			<div class="row">
 				<div class="col col-lg-6">
-					<h3 class="text-left"> 
+					<h4 class="text-left"> 
 						<?php 
 						if ( has_custom_logo() ) {
 							the_custom_logo();
@@ -33,12 +33,12 @@ endif;
 							bloginfo('name' );
 						};
 						?>
-					</h3>
+					</h4>
 				</div>
-				<div class="col col-lg-6">
-					<div class="search-form-container">
+				<div class="col col-lg-6 ">
+					
 						<?php get_search_form() ?>
-					</div>
+					
 				</div>
 			</div> <!-- end row 1 ==============================================-->
 			<div class="row">
@@ -50,7 +50,7 @@ endif;
 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
 								<span class="navbar-toggler-icon"></span>
 							</button>
-							<a class="navbar-brand" href="#">Best Buy Cars</a>
+							<a class="navbar-brand" href="<?php $url = get_site_url(); echo $url; ?>">Best Buy Cars</a>
 								<?php
 								wp_nav_menu( array(
 									'theme_location'    => 'primary',

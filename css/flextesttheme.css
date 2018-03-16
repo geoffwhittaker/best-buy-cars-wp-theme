@@ -61,3 +61,6 @@ padding: 1em
 .search-header{
     padding: 0.5em;
 }
+.search-wrap{
+    float: right;
+}

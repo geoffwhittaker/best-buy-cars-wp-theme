@@ -4,7 +4,7 @@
 
 ?> 
        
-<div class="row">    
+<div class="row top-margin">    
     <div class="col-xs-12 col-sm-8">
         <?php 
        
