@@ -64,3 +64,41 @@ padding: 1em
 .search-wrap{
     float: right;
 }
+
+.single-product {
+background-color: aqua;
+color: red;
+width: 100%;
+}
+
+ /* grid styling =========================================================*/
+ .blog-element { display: block; 
+    Border-top: solid 0.5em white;
+    height: 200px; 
+    overflow: hidden; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-size: cover; }
+
+ .blog-element a { color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,.5) }
+ 
+ .second-row-padding:nth-child(2) { padding-right: 0; }
+ .second-row-padding:nth-child(3) { padding-left: 0; }
+ 
+ .third-row-padding { padding: 0; }
+ .third-row-padding:nth-child(4) { padding-left: 15px; }
+ .third-row-padding:nth-child(6) { padding-right: 15px; }
+
+
+ /* mobile fixes for grid =========================================================*/
+
+ @media screen and (max-width: 600px) {
+    .second-row-padding:nth-child(2){
+        padding-right: 15px;
+      }
+      .second-row-padding:nth-child(3){
+        padding-left: 15px;
+      }
+    
+  }
+  

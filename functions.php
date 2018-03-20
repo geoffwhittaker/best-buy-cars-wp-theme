@@ -70,5 +70,64 @@ function widget_setup(){
          )
      );
             };
-add_action('widgets_init' , 'widget_setup')
-?>
+add_action('widgets_init' , 'widget_setup');
+
+add_action( 'woocommerce_before_add_to_cart_form' , 'print_something' );
+function print_something (){
+
+    echo 'test';
+}
+add_action( 'after_setup_theme', 'yourtheme_setup' );
+ 
+function yourtheme_setup() {
+    add_theme_support( 'wc-product-gallery-zoom' );
+    add_theme_support( 'wc-product-gallery-lightbox' );
+    add_theme_support( 'wc-product-gallery-slider' );
+}
+/*
+==========================================================
+Custom posts type
+==========================================================
+*/
+function reviews_custom_post_type(){
+$labels = array(
+    'name' => 'Reviews',
+    'singular_name' => 'Review',
+    'add_new' => 'Add review post',
+    'all_items' => 'All items',
+    'add_new_item' => 'Add item',
+    'edit_item' => 'Edit item',
+    'new_item' => 'New item',
+    'view_item' => 'View item',
+    'search_item' => 'Search reviews',
+    'not_found' => 'No items found',
+    'not-found_in_trash' => 'No items found in trash',
+    'parent_item_colon' => 'Parent item',  
+);
+$args = array(
+    'labels' => $labels,
+    'public' => true,
+    'has_archive' => true,
+    'publicly_queryable' => true,
+    'query_var' => true,
+    'rewrite' => true,
+    'capability_type' => 'post',
+    'hierachical' => false,
+    'supports' => array(
+        'title',
+        'editor',
+        'excerpt',
+        'thumbnail',
+        'revisions',
+    ),
+    'taxonomies' => array(
+        'category',
+        'post_tag',
+    ),
+    'menu_position' => 5,
+    'exclude_from_search' => false,
+);
+register_post_type( 'reviews', $args );
+}
+add_action('init', 'reviews_custom_post_type');
+
